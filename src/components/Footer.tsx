@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             {/* <h3 className="font-bold mb-4">ePower</h3> */}
-            <Image src="/logo.png" alt="ePower" width={150} height={100} />
+            <Image src={'/logo.png'} alt="ePower" width={200} height={100} className='object-cover' />
             <p>Mediation of agricultural or green areas, as well as commercial and industrial roofs to photovoltaic investors.</p>
           </div>
           <div>
