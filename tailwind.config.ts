@@ -1,3 +1,26 @@
+// // tailwind.config.js
+// import {nextui} from "@nextui-org/react";
+
+// /** @type {import('tailwindcss').Config} */
+// const config = {
+//   content: [
+//     // ...
+//     // make sure it's pointing to the ROOT node_module
+//     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+//   ],
+//   theme: {
+//     extend: {},
+//   },
+//   darkMode: "class",
+//   plugins: [nextui()]
+// }
+
+// export default config;
+
+
+
+
+import { nextui } from "@nextui-org/react";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -5,6 +28,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -22,9 +46,34 @@ const config: Config = {
         lightestBlue: 'var(--color-lightest-blue)',
         offWhite: 'var(--color-off-white)',
         white: 'var(--color-white)',
+        lightTeal: 'var(--color-teal-light)',
+        lightestTeal: 'rgba(20, 156, 154, 0.5)',
+        lighterTeal : 'rgba(20, 156, 154, 0.4)',
       },
     },
   },
-  plugins: [],
+  darkMode: "class",
+  plugins: [nextui({
+    themes: {
+      light: {
+       colors: {
+        primary: "#149C9A",
+        secondary: "#f9f9f9",
+        background: "#f7f7f7",
+        foreground: "#333",
+       }
+      },
+      dark: {
+        colors:{
+        primary: "#149C9A",
+        secondary: "#f9f9f9",
+        background: "#f7f7f7",
+        foreground: "#333",
+
+        }
+      },
+    }
+  })]
 };
 export default config;
+ 

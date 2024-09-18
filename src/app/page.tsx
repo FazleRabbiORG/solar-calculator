@@ -1,10 +1,11 @@
 import Hero from '@/components/Hero'
-import LandTypeSelector from '@/components/LandTypeSelector'
+import LandTypeSelector from '@/components/selectionComponents/LandTypeSelector'
 import Benefits from '@/components/Benefits'
 import HowItWorks from '@/components/HowItWorks'
 import CO2Info from '@/components/CO2Info'
 import FAQ from '@/components/FAQ'
 import Calculator from '@/components/Calculator'
+import OpenScapceWorth from '@/components/OpenScapceWorth'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <HowItWorks />
       <CO2Info />
       <FAQ />
+      <OpenScapceWorth/>
     </>
   )
 }

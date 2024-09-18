@@ -16,6 +16,7 @@
   --color-lightest-blue: #E7F2FF;
   --color-off-white: #F6F8FA;
   --color-white: #FDFDFD;
+  --color-teal-light: rgba(20, 156, 154, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +34,7 @@
     --color-lightest-blue: #E7F2FF;
     --color-off-white: #F6F8FA;
     --color-white: #FDFDFD;
+    --color-teal-light: rgba(20, 156, 154, 0.3);
   }
 }
 
