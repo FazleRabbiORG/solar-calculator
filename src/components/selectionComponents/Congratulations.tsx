@@ -16,7 +16,7 @@ const Congratulations: React.FC<CongratulationsProps> = ({
 
     return (
         <div>
-            <div className="mt-8 flex flex-col justify-center items-center">
+            <div className="mt-8 flex flex-col justify-center items-center duration-100 animate-appearance-in">
                 {loading ? (
                     <p className='my-16'>Submitting your information....</p>
                 ) : (

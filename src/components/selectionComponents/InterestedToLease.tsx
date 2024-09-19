@@ -12,10 +12,12 @@ interface LandType {
 
 export default function InterestedToLease({
     interestedToLease,
-    setInterestedToLease
+    setInterestedToLease,
+    handleNextStep
 }: {
     interestedToLease: string | null;
     setInterestedToLease: (type: string) => void;
+    handleNextStep: () => void;
 }) {
     const landTypes: LandType[] = [
         { name: 'Solar', icon: <GiSolarPower /> },
@@ -25,7 +27,7 @@ export default function InterestedToLease({
     ]
 
     return (
-        <div className="relative  ">
+        <div className="relative  duration-100 animate-appearance-in">
             <div className="container mx-auto">
                 <h2 className="text-2xl font-bold mb-4 text-center">What kind of area is it?</h2>
                 <p className="text-center mb-8">
@@ -36,6 +38,7 @@ export default function InterestedToLease({
                         <button onClick={
                             () => {
                                 setInterestedToLease(type.name);
+                                handleNextStep();
                             }
                         } key={type.name} className={`flex flex-col items-center p-4 border rounded  ${type.name === interestedToLease ? "bg-teal" : "hover:bg-black/30"}`}>
                             <span className="text-4xl mb-2">{type.icon}</span>

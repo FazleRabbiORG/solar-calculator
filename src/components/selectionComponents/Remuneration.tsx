@@ -12,9 +12,11 @@ interface LandType {
 export default function Remuneration({
     remuneration,
     setRemuneration,
+    handleNextStep
 }: {
     remuneration: string | null;
     setRemuneration: (type: string) => void;
+    handleNextStep: () => void;
 }) {
     const landTypes: LandType[] = [
         { name: 'Annual lease', icon: <FaHandHoldingUsd /> },
@@ -23,7 +25,7 @@ export default function Remuneration({
     ]
 
     return (
-        <div className="relative">
+        <div className="relative duration-100 animate-appearance-in">
             <div className="container mx-auto">
                 <h2 className="text-2xl font-bold mb-4 text-center">What remuneration do you want for the area?</h2>
                 <p className="text-center mb-8">
@@ -33,7 +35,9 @@ export default function Remuneration({
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 -4 ">
                         {landTypes.map((type) => (
                             <button
-                                onClick={() => setRemuneration(type.name)}
+                                onClick={() => {
+                                    setRemuneration(type.name)
+                                    handleNextStep()}}
                                 key={type.name}
                                 className={`flex flex-col items-center p-6 border  rounded-lg duration-500 ${type.name === remuneration ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal"}`}
                                     >

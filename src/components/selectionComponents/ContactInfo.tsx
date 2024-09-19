@@ -14,8 +14,6 @@ interface ContactInfoProps {
         phone: string;
     }>>;
 }
-
-
 function ContactInfo({ contactInfo, setContactInfo }: ContactInfoProps) {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -27,7 +25,7 @@ function ContactInfo({ contactInfo, setContactInfo }: ContactInfoProps) {
     };
 
     return (
-        <div>
+        <div className="duration-100 animate-appearance-in">
             <h2 className="text-2xl font-bold mb-4 text-center">Who should receive the free lease calculation by email?</h2>
             <p className="text-center mb-8">
             We will then send you an email with the lease calculation.

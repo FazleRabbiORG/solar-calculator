@@ -10,10 +10,12 @@ interface LandType {
 
 export default function MotorOrRailway({
     motorOrRail,
-    setMotorOrRail
+    setMotorOrRail,
+    handleNextStep
 }: {
     motorOrRail: string | null;
     setMotorOrRail: (type: string) => void;
+    handleNextStep: () => void;
 }) {
     const landTypes: LandType[] = [
         { name: 'Highway', icon: <GiHorizonRoad /> },
@@ -22,7 +24,7 @@ export default function MotorOrRailway({
     ]
 
     return (
-        <div className="relative">
+        <div className="relative duration-100 animate-appearance-in">
             <div className="container mx-auto">
                 <h2 className="text-2xl font-bold mb-4 text-center">Is the area on a motorway or railway line?</h2>
                 <p className="text-center mb-8">
@@ -32,7 +34,10 @@ export default function MotorOrRailway({
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4 rounded-3xl ">
                         {landTypes.map((type) => (
                             <button
-                                onClick={() => setMotorOrRail(type.name)}
+                                onClick={() => {
+                                    setMotorOrRail(type.name)
+                                    handleNextStep()
+                                }}
                                 key={type.name}
                                 className={`flex flex-col items-center p-6 border  rounded-lg duration-500 ${type.name === motorOrRail ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal"}`}
                             >

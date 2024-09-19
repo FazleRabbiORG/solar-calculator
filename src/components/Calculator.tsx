@@ -13,6 +13,7 @@ import Remuneration from "./selectionComponents/Remuneration";
 import ContactInfo from "./selectionComponents/ContactInfo";
 import OwnLand from "./selectionComponents/OwnLand";
 import Congratulations from "./selectionComponents/Congratulations";
+import { motion, AnimatePresence } from 'framer-motion';
 
 enum Steps {
   LandType,
@@ -110,11 +111,15 @@ function Calculator() {
     if (currentStep === Steps.ContactInfo) {
       handleSubmit();
     }
-    setCurrentStep((prevStep) => prevStep + 1);
+    setTimeout(() => {
+      setCurrentStep((prevStep) => prevStep + 1);
+    }, 100);
   };
 
   const handlePreviousStep = () => {
-    setCurrentStep((prevStep) => prevStep - 1);
+    setTimeout(() => {
+      setCurrentStep((prevStep) => prevStep - 1);
+    }, 100);
   };
 
 
@@ -155,9 +160,16 @@ function Calculator() {
     }
   };
 
+  const variants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
+
   return (
     <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY} libraries={['places']}>
       <div className='bg-white p-8 lg:p-16 rounded-md relative'>
+    
         {renderStep(currentStep, {
           selectedLandType,
           setSelectedLandType,
@@ -184,7 +196,8 @@ function Calculator() {
           congratulations,
           setCongratulations,
           loading,
-          handleSubmit
+          handleSubmit,
+          handleNextStep
         })}
         {
           currentStep !== Steps.Congratulations && (

@@ -1,6 +1,8 @@
 // File: components/LandTypeSelector.tsx
 'use client'
 
+import { motion } from 'framer-motion';
+
 interface LandType {
   name: string;
   icon: string;
@@ -9,9 +11,11 @@ interface LandType {
 export default function LandTypeSelector({
   selectedLandType,
   setSelectedLandType,
+  handleNextStep
 }: {
   selectedLandType: string | null;
   setSelectedLandType: (type: string) => void;
+  handleNextStep : () => void;
 }) {
   const landTypes: LandType[] = [
     { name: 'Grassland', icon: '🌿' },
@@ -23,7 +27,7 @@ export default function LandTypeSelector({
   ]
 
   return (
-    <div  className="relative  ">
+    <div  className="relative duration-100 animate-appearance-in ">
       <div className="container mx-auto">
         <h2 className="text-2xl font-bold mb-4 text-center">What kind of area is it?</h2>
         <p className="text-center mb-8">
@@ -34,6 +38,7 @@ export default function LandTypeSelector({
             <button onClick={
               () => {
                 setSelectedLandType(type.name);
+                handleNextStep();
               }
             } key={type.name} 
               className={`flex flex-col items-center p-6 border rounded-lg duration-500 ${type.name === selectedLandType ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal"}`}

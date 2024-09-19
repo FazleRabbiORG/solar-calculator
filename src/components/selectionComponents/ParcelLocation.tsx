@@ -24,7 +24,7 @@ function ParcelLocation({ parcelLocation, setParcelLocation }: ParcelLocationPro
     };
 
     return (
-        <div>
+        <div className="duration-100 animate-appearance-in">
             <h2 className="text-2xl font-bold mb-4 text-center">Where is the parcel located?</h2>
             <p className="text-center mb-8">
             If you have several parcels, please indicate the largest here.

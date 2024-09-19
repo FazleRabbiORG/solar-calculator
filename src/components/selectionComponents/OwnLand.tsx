@@ -3,17 +3,19 @@ import { FaRegCheckCircle, FaRegTimesCircle } from "react-icons/fa";
 interface OwnLandProps {
   ownsLand: String | null;
   setOwnsLand: (value: string) => void;
+  handleNextStep: () => void;
 }
 
 const OwnLand = ({
   ownsLand,
-  setOwnsLand
+  setOwnsLand,
+  handleNextStep
 }: OwnLandProps) => {
 
   const options = ["Yes", "No"];
 
   return (
-      <div className="container mx-auto">
+      <div className="container mx-auto duration-100 animate-appearance-in">
         <h2 className="text-2xl font-bold mb-4 text-center">What kind of area is it?</h2>
         <p className="text-center mb-8">
           Please select an option.
@@ -24,6 +26,7 @@ const OwnLand = ({
             <button onClick={
               () => {
                 setOwnsLand(option);
+                handleNextStep();
               }
             } key={option} className={`flex flex-col items-center p-4 border rounded  ${option === ownsLand ? "bg-teal" : "hover:bg-black/30"}`}>
               <span className="text-4xl mb-2">{
