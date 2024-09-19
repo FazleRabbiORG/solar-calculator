@@ -76,16 +76,16 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 py-16">
+    <div className="bg-gray-100 py-16">
       <div className="container mx-auto">
-        <h2 className="text-2xl font-bold mb-8 text-center">Frequently asked questions (FAQs)</h2>
+        <h2 className="text-2xl text-darkGray font-bold mb-8 text-center">Frequently asked questions (FAQs)</h2>
         <p className="text-center text-gray-600 md:px-32 mb-8"> {"We always want to give you a comprehensive answer to your questions about leasing your space. Some of the most common questions have already been answered here. And once we don't know what to do ourselves, we have a large network of investors and project developers who can help you."}</p>
         <div className="space-y-4 md:px-20">
           {faqs.map((faq, index) => (
             <div key={index}>
               <Accordion aria-label={faq.question}>
                 <AccordionItem className='font-bold' title={faq.question}>
-                  <div className='font-normal'>{faq.answer}</div>
+                  <div className='font-normal text-gray-600'>{faq.answer}</div>
                 </AccordionItem>
               </Accordion>
               <Divider />

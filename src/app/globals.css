@@ -16,7 +16,7 @@
   --color-lightest-blue: #E7F2FF;
   --color-off-white: #F6F8FA;
   --color-white: #FDFDFD;
-  --color-teal-light: rgba(20, 156, 154, 0.3);
+  --color-teal-light: rgba(20, 156, 154, 0.4);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,11 +39,12 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--color-dark-gray));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
 }

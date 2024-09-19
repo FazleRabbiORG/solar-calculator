@@ -18,7 +18,7 @@ const Congratulations: React.FC<CongratulationsProps> = ({
         <div>
             <div className="mt-8 flex flex-col justify-center items-center duration-100 animate-appearance-in">
                 {loading ? (
-                    <p className='my-16'>Submitting your information....</p>
+                    <p className='my-16 text-darkGray'>Submitting your information....</p>
                 ) : (
                     <>
                         <FaCircleCheck className="text-teal text-9xl mb-10" />

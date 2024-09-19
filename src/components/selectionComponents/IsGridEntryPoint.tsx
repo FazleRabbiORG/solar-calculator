@@ -42,7 +42,7 @@ export default function IsGridEntryPoint({
                                 }
                                 }
                                 key={type.name}
-                            className={`flex flex-col items-center border px-12 py-8  rounded-lg duration-500 ${type.name === isGridEntryPoint ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal"}`}
+                            className={`flex flex-col items-center border px-12 py-8  rounded-lg duration-500 ${type.name === isGridEntryPoint ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal hover:text-white"}`}
                              >
                                 <span className="text-5xl  mb-2">{type.icon}</span>
                                 <span className="mt-4">{type.name}</span>

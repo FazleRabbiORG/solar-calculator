@@ -14,9 +14,9 @@ export default function HowItWorks() {
   ]
 
   return (
-    <div className="bg-white dark:bg-gray-800 py-16">
+    <div className="bg-white py-16">
       <div className="container mx-auto">
-        <h2 className="text-2xl font-bold mb-8 text-center">{"That's how it works!"}</h2>
+        <h2 className="text-2xl font-bold mb-8 text-darkGray text-center">{"That's how it works!"}</h2>
         <div className="flex flex-col md:flex-row justify-between items-start">
           {steps.map((step, index) => (
             <div
@@ -32,8 +32,8 @@ export default function HowItWorks() {
               <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 bg-teal">
                 {index + 1}
               </div>
-              <h3 className="font-semibold mb-2 text-center">{step.title}</h3>
-              <p className="text-center">{step.description}</p>
+              <h3 className="font-semibold mb-2 text-center text-darkGray">{step.title}</h3>
+              <p className="text-center text-gray-600">{step.description}</p>
             </div>
           ))}
         </div>

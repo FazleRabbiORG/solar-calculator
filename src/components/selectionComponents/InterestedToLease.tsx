@@ -43,7 +43,7 @@ export default function InterestedToLease({
                                 }
                             } key={type.name}
 
-                                className={`flex flex-col items-center px-12 py-8 border  rounded-lg duration-500 ${type.name === interestedToLease ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal"}`}>
+                                className={`flex flex-col  hover:text-white  items-center px-12 py-8 border  rounded-lg duration-500 ${type.name === interestedToLease ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal"}`}>
 
                                 <span className="text-5xl mb-2">{type.icon}</span>
                                 <span className="mt-4">{type.name}</span>

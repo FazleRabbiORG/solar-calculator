@@ -29,7 +29,7 @@ const LandConnectivity = ({
                                 handleNextStep();
                             }
                         } key={option}
-                            className={`flex flex-col items-center px-12 py-8 border  rounded-lg duration-500 ${option === landConnectivity ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal"}`}
+                            className={`flex flex-col items-center px-12 py-8 border  rounded-lg duration-500 ${option === landConnectivity ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal hover:text-white"}`}
                         >
                             <span className="text-5xl mb-2">{
                                 option === "Yes" ? <FaRegCheckCircle /> : <FaRegTimesCircle />

@@ -29,7 +29,7 @@ const OwnLand = ({
                 handleNextStep();
               }
             } key={option}
-              className={`flex flex-col items-center px-12 py-8 border  rounded-lg duration-500 ${option === ownsLand ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal"}`}
+              className={`flex flex-col items-center px-12 py-8 border  rounded-lg duration-500 ${option === ownsLand ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal hover:text-white"}`}
 
             >
               <span className="text-4xl mb-2">{
