@@ -31,8 +31,22 @@ export async function POST(req: NextRequest) {
         // // Send email
         // await transporter.sendMail(mailOptions);
 
-        SendToUser({ contactInfo });
-        SendToAdmin({ data });
+        
+        await new Promise((resolve, reject) => { 
+            SendToUser({ contactInfo })
+            .then(() => {
+                resolve("Email sent to user");
+            }
+            )
+            .catch((error) => {
+                reject(error);
+            });
+        }
+        );
+            
+
+
+        await  SendToAdmin({ data });
 
         return NextResponse.json({ message: "Email sent successfully" });
     } catch (error) {
