@@ -3,7 +3,7 @@ export default async function SendToUser({ contactInfo }:any) {
     console.log("Sending email to user", contactInfo?.email);
     const transporter = nodemailer.createTransport({
         service: "gmail",
-        host: "smtp.ethereal.email",
+        host: "smtp.gmail.com",
         port: 465,
         secure: true,
         auth: {

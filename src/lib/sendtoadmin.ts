@@ -3,7 +3,7 @@ export default async function SendToAdmin({ data }:any) {
     
     const transporter = nodemailer.createTransport({
         service: "gmail",
-        host: "smtp.ethereal.email",
+        host: "smtp.gmail.com",
         port: 465,
         secure: true,
         auth: {
