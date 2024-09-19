@@ -23,7 +23,6 @@ function ContactInfo({ contactInfo, setContactInfo }: ContactInfoProps) {
             [name]: value
         });
     };
-
     return (
         <div className="duration-100 animate-appearance-in">
             <h2 className="text-2xl font-bold mb-4 text-center">Who should receive the free lease calculation by email?</h2>
