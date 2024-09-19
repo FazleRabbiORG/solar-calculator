@@ -15,29 +15,33 @@ const OwnLand = ({
   const options = ["Yes", "No"];
 
   return (
-      <div className="container mx-auto duration-100 animate-appearance-in">
-        <h2 className="text-2xl font-bold mb-4 text-center">What kind of area is it?</h2>
-        <p className="text-center mb-8">
-          Please select an option.
-        </p>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+    <div className="container mx-auto duration-100 animate-appearance-in">
+      <h2 className="text-2xl font-bold mb-4 text-center">Do you own the area?</h2>
+      <p className="text-center mb-8">
+        Please select an option.
+      </p>
+      <div className="flex justify-center">
+        <div className="grid grid-cols-2 gap-4">
           {options.map((option) => (
             <button onClick={
               () => {
                 setOwnsLand(option);
                 handleNextStep();
               }
-            } key={option} className={`flex flex-col items-center p-4 border rounded  ${option === ownsLand ? "bg-teal" : "hover:bg-black/30"}`}>
+            } key={option}
+              className={`flex flex-col items-center px-12 py-8 border  rounded-lg duration-500 ${option === ownsLand ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal"}`}
+
+            >
               <span className="text-4xl mb-2">{
                 option === "Yes" ? <FaRegCheckCircle /> : <FaRegTimesCircle />
               } </span>
-              <span>{option}</span>
+              <span className="mt-4">{option}</span>
             </button>
           ))}
         </div>
-
       </div>
+
+    </div>
   );
 }
 

@@ -20,22 +20,25 @@ const LandConnectivity = ({
             <p className="text-center mb-8">
                 Please select an option.
             </p>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                {options.map((option) => (
-                    <button onClick={
-                        () => {
-                            setLandConnectivity(option);
-                            handleNextStep();
-                        }
-                    } key={option} className={`flex flex-col items-center p-4 border rounded  ${option === landConnectivity ? "bg-teal" : "hover:bg-black/30"}`}>
-                        <span className="text-4xl mb-2">{
-                            option === "Yes" ? <FaRegCheckCircle /> : <FaRegTimesCircle />
-                        } </span>
-                        <span>{option}</span>
-                    </button>
-                ))}
-            </div> 
+            <div className="flex justify-center">
+                <div className="grid grid-cols-2 gap-4">
+                    {options.map((option) => (
+                        <button onClick={
+                            () => {
+                                setLandConnectivity(option);
+                                handleNextStep();
+                            }
+                        } key={option}
+                            className={`flex flex-col items-center px-12 py-8 border  rounded-lg duration-500 ${option === landConnectivity ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal"}`}
+                        >
+                            <span className="text-5xl mb-2">{
+                                option === "Yes" ? <FaRegCheckCircle /> : <FaRegTimesCircle />
+                            } </span>
+                            <span className="mt-4">{option}</span>
+                        </button>
+                    ))}
+                </div>
+            </div>
 
         </div>
     );

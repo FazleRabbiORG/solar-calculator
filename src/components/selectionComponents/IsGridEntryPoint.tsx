@@ -33,7 +33,7 @@ export default function IsGridEntryPoint({
                     Please select an option.
                 </p>
                 <div className="flex justify-center">
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4  ">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4  ">
                         {landTypes.map((type) => (
                             <button
                                 onClick={() => {
@@ -42,9 +42,9 @@ export default function IsGridEntryPoint({
                                 }
                                 }
                                 key={type.name}
-                                className={`flex flex-col items-center p-3 border rounded-lg duration-500 ${type.name === isGridEntryPoint ? "bg-teal text-white" : " hover:bg-black/30"}`}
-                            >
-                                <span className="text-5xl mb-2">{type.icon}</span>
+                            className={`flex flex-col items-center border px-12 py-8  rounded-lg duration-500 ${type.name === isGridEntryPoint ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal"}`}
+                             >
+                                <span className="text-5xl  mb-2">{type.icon}</span>
                                 <span className="mt-4">{type.name}</span>
                             </button>
                         ))}

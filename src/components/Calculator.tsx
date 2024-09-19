@@ -109,17 +109,19 @@ function Calculator() {
 
   const handleNextStep = () => {
     if (currentStep === Steps.ContactInfo) {
-      handleSubmit();
-    }
-    setTimeout(() => {
+      if (contactInfo.email && contactInfo.phone) {
+        handleSubmit();
+          setCurrentStep((prevStep) => prevStep + 1);
+      }else{
+        alert("Please type Email and phone number properly")
+      }
+    }else{
       setCurrentStep((prevStep) => prevStep + 1);
-    }, 100);
+    }
   };
 
   const handlePreviousStep = () => {
-    setTimeout(() => {
       setCurrentStep((prevStep) => prevStep - 1);
-    }, 100);
   };
 
 
@@ -169,7 +171,7 @@ function Calculator() {
   return (
     <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY} libraries={['places']}>
       <div className='bg-white p-8 lg:p-16 rounded-md relative'>
-    
+
         {renderStep(currentStep, {
           selectedLandType,
           setSelectedLandType,
