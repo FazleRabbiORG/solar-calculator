@@ -9,16 +9,16 @@ import OpenScapceWorth from '@/components/OpenScapceWorth'
 
 export default function Home() {
   return (
-    <>
-        <Hero />
-        <div className='-mt-[200px] lg:p-20 p-5'>
-          <Calculator />
-        </div>
+    <div className='bg-bgTeal'>
+      <Hero />
+      <div className='-mt-[200px] lg:p-20 p-5'>
+        <Calculator />
+      </div>
       <Benefits />
       <HowItWorks />
       <CO2Info />
       <FAQ />
-      <OpenScapceWorth/>
-    </>
+      <OpenScapceWorth />
+    </div>
   )
 }

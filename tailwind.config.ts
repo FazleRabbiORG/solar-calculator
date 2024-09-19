@@ -49,6 +49,7 @@ const config: Config = {
         lightTeal: 'var(--color-teal-light)',
         lightestTeal: 'rgba(20, 156, 154, 0.5)',
         lighterTeal : 'rgba(20, 156, 154, 0.4)',
+        bgTeal:'rgba(20, 156, 154, 0.1)',
       },
     },
   },

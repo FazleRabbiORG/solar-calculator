@@ -111,17 +111,17 @@ function Calculator() {
     if (currentStep === Steps.ContactInfo) {
       if (contactInfo.email && contactInfo.phone) {
         handleSubmit();
-          setCurrentStep((prevStep) => prevStep + 1);
-      }else{
+        setCurrentStep((prevStep) => prevStep + 1);
+      } else {
         alert("Please type Email and phone number properly")
       }
-    }else{
+    } else {
       setCurrentStep((prevStep) => prevStep + 1);
     }
   };
 
   const handlePreviousStep = () => {
-      setCurrentStep((prevStep) => prevStep - 1);
+    setCurrentStep((prevStep) => prevStep - 1);
   };
 
 
@@ -204,13 +204,17 @@ function Calculator() {
         {
           currentStep !== Steps.Congratulations && (
             <div className="text-center mt-8">
-              <button
-                disabled={currentStep === Steps.LandType}
-                onClick={handlePreviousStep}
-                className="bg-lightGray text-white px-6 py-2 rounded-full font-bold mr-4"
-              >
-                Previous
-              </button>
+              {
+                currentStep !== Steps.LandType && (
+                  <button
+                    // disabled={currentStep === Steps.LandType}
+                    onClick={handlePreviousStep}
+                    className="bg-lightGray text-white px-6 py-2 rounded-full font-bold mr-4"
+                  >
+                    Previous
+                  </button>
+                )
+              }
               <button
                 disabled={buttonDisabled}
                 onClick={handleNextStep}
