@@ -23,7 +23,17 @@ export default async function SendToUser({ contactInfo }:any) {
     };
 
     // Send email
-    await transporter.sendMail(mailOptions);
+    // await transporter.sendMail(mailOptions);
+
+    await new Promise((resolve, reject) => {
+      transporter.sendMail(mailOptions, function (err) {
+        if (!err) {
+          resolve('Email sent!');
+        } else {
+          reject(err);
+        }
+      });
+    });
 
 }
 
