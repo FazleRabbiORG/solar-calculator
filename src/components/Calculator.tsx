@@ -104,13 +104,55 @@ function Calculator() {
     phone: ''
   });
   const [congratulations, setCongratulations] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleNextStep = () => {
+    if (currentStep === Steps.ContactInfo) {
+      handleSubmit();
+    }
     setCurrentStep((prevStep) => prevStep + 1);
   };
 
   const handlePreviousStep = () => {
     setCurrentStep((prevStep) => prevStep - 1);
+  };
+
+
+  const handleSubmit = async () => {
+    setLoading(true);
+    const data = {
+      selectedLandType,
+      ownsLand,
+      landSize,
+      landConnectivity,
+      currentlyLeased,
+      interestedToLease,
+      motorOrRail,
+      isGridEntryPoint,
+      parcelLocation,
+      remuneration,
+      contactInfo,
+    };
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setCongratulations('Thank you! Your information has been submitted.');
+      } else {
+        console.error('Error sending email');
+      }
+    } catch (error) {
+      console.error('Error sending email', error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -141,35 +183,30 @@ function Calculator() {
           setContactInfo,
           congratulations,
           setCongratulations,
+          loading,
+          handleSubmit
         })}
-        <div className="text-center mt-8">
-          <button
-            disabled={currentStep === Steps.LandType}
-            onClick={handlePreviousStep}
-            className="bg-lightGray text-white px-6 py-2 rounded-full font-bold mr-4"
-          >
-            Previous
-          </button>
-          <button
-            disabled={buttonDisabled}
-            onClick={handleNextStep}
-            className={`${buttonDisabled ? "bg-lightGray" : "bg-teal"} text-white px-6 py-2 rounded-full font-bold`}
-          >
-            Continue
-          </button>
+        {
+          currentStep !== Steps.Congratulations && (
+            <div className="text-center mt-8">
+              <button
+                disabled={currentStep === Steps.LandType}
+                onClick={handlePreviousStep}
+                className="bg-lightGray text-white px-6 py-2 rounded-full font-bold mr-4"
+              >
+                Previous
+              </button>
+              <button
+                disabled={buttonDisabled}
+                onClick={handleNextStep}
+                className={`${buttonDisabled ? "bg-lightGray" : "bg-teal"} text-white px-6 py-2 rounded-full font-bold`}
+              >
+                Continue
+              </button>
 
-          {
-            currentStep === Steps.Congratulations && (
-              <div className="mt-8">
-                <h2 className="text-2xl font-bold mb-4 text-center">Congratulations!</h2>
-                <p className="text-center mb-8">
-                  Your information has been submitted successfully.
-                </p>
-              </div>
-            )
-          }
-
-        </div>
+            </div>
+          )
+        }
       </div>
     </LoadScript>
   );

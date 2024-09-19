@@ -3,7 +3,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Button } from '@nextui-org/react';
-import { RxHamburgerMenu } from 'react-icons/rx';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -61,7 +60,7 @@ export default function Header() {
       <NavbarMenu 
       >
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={index}>
+          <NavbarMenuItem className='bg-transparent' key={index}>
             <Link
               className="w-full"
               color="foreground"
