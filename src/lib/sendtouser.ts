@@ -4,10 +4,11 @@ export default async function SendToUser({ contactInfo }:any) {
     const transporter = nodemailer.createTransport({
         service: "gmail",
         host: "smtp.ethereal.email",
-        port: 587,
+        port: 465,
+        secure: true,
         auth: {
-            user: process.env.SMTP_SERVER_USERNAME, // Replace with your SMTP username
-            pass: process.env.SMTP_SERVER_PASSWORD, // Replace with your SMTP password
+            user: "fazlerabbistat@gmail.com", // Replace with your SMTP username
+            pass: "kaojzgfrwkzgwmbh", // Replace with your SMTP password
         },
     });
     const mailOptions = {
