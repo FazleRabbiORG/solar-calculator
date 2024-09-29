@@ -4,7 +4,7 @@ import Image from 'next/image'
 import solarImage from '../images/solar_works.jpg'
 
 export default function CO2Info() { 
-  return (
+  return ( 
     <div className="relative bg-teal grid grid-cols-1 md:grid-cols-5  text-white md:h-[400px]">
       <div className=" md:flex md:flex-col md:justify-center items-center mx-auto p-8 col-span-3">
             <h2 className="text-2xl font-bold mb-4 text-center">Ihre Pachtfläche – Ein Beitrag zur CO₂-Reduktion</h2>
