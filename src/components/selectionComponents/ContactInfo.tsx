@@ -15,7 +15,6 @@ interface ContactInfoProps {
     }>>;
 }
 function ContactInfo({ contactInfo, setContactInfo }: ContactInfoProps) {
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setContactInfo({
@@ -25,20 +24,21 @@ function ContactInfo({ contactInfo, setContactInfo }: ContactInfoProps) {
     };
     return (
         <div className="duration-100 animate-appearance-in">
-            <h2 className="text-2xl font-bold mb-4 text-center">Who should receive the free lease calculation by email?</h2>
+            <h2 className="text-2xl font-bold mb-4 text-center">Wer soll die kostenfreie Pachtberechnung per E-Mail erhalten?
+            </h2>
             <p className="text-center mb-8">
-            We will then send you an email with the lease calculation.
+            Wir senden Ihnen direkt im Anschluss eine E-Mail mit der Pachtberechnung.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 ">
                 <select  name="salutation" value={contactInfo.salutation} onChange={handleChange} className="border p-2 rounded-md mb-4 md:col-span-2">
-                    <option value="Salutation">Salutation*</option>
-                    <option value="Mr">Mr</option>
-                    <option value="Ms">Ms</option>
+                    <option value="Salutation">Anrede*</option>
+                    <option value="Herr">Herr</option>
+                    <option value="Frau">Frau</option>
                 </select>
                 <input
                     type="text"
                     name="firstName"
-                    placeholder="First Name*"
+                    placeholder="Vorname*"
                     value={contactInfo.firstName}
                     onChange={handleChange}
                     className="border p-2 rounded-md mb-4"
@@ -46,7 +46,7 @@ function ContactInfo({ contactInfo, setContactInfo }: ContactInfoProps) {
                 <input
                     type="text"
                     name="sureName"
-                    placeholder="Sure Name*"
+                    placeholder="Nachname*"
                     value={contactInfo.sureName}
                     onChange={handleChange}
                     className="border p-2 rounded-md mb-4"
@@ -54,7 +54,7 @@ function ContactInfo({ contactInfo, setContactInfo }: ContactInfoProps) {
                 <input
                     type="email"
                     name="email"
-                    placeholder="Email*"
+                    placeholder="E-Mail*"
                     value={contactInfo.email}
                     onChange={handleChange}
                     className="border p-2 rounded-md mb-4"
@@ -62,7 +62,7 @@ function ContactInfo({ contactInfo, setContactInfo }: ContactInfoProps) {
                 <input
                     type="text"
                     name="phone"
-                    placeholder="Phone*"
+                    placeholder="Telefon* (für Rückfragen)"
                     value={contactInfo.phone}
                     onChange={handleChange}
                     className="border p-2 rounded-md mb-4"

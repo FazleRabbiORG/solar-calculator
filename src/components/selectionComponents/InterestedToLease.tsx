@@ -21,17 +21,17 @@ export default function InterestedToLease({
 }) {
     const landTypes: LandType[] = [
         { name: 'Solar', icon: <GiSolarPower /> },
-        { name: 'Wind power', icon: <MdOutlineWindPower /> },
-        { name: 'Battery storage', icon: <MdBatteryChargingFull /> },
-        { name: 'no', icon: <FaRegTimesCircle /> }
+        { name: 'Windkraft', icon: <MdOutlineWindPower /> },
+        { name: 'Batteriespeicher', icon: <MdBatteryChargingFull /> },
+        { name: 'Nein', icon: <FaRegTimesCircle /> }
     ]
 
     return (
         <div className="relative  duration-100 animate-appearance-in">
             <div className="container mx-auto">
-                <h2 className="text-2xl font-bold mb-4 text-center">Are you interested in leasing for renewable energies?</h2>
+                <h2 className="text-2xl font-bold mb-4 text-center">Sind Sie an der Verpachtung für erneuerbare Energien interessiert?</h2>
                 <p className="text-center mb-8">
-                    Please select an option.
+                Bitte wählen Sie eine Option aus.
                 </p>
                 <div className="flex justify-center">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center ">

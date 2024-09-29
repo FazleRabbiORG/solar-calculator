@@ -18,17 +18,17 @@ export default function MotorOrRailway({
     handleNextStep: () => void;
 }) {
     const landTypes: LandType[] = [
-        { name: 'Highway', icon: <GiHorizonRoad /> },
-        { name: 'Railway line', icon: <GiRailRoad /> },
-        { name: 'No', icon: <FaRegTimesCircle /> }
+        { name: 'Autobahn', icon: <GiHorizonRoad /> },
+        { name: 'Bahnstrecke', icon: <GiRailRoad /> },
+        { name: 'Nein', icon: <FaRegTimesCircle /> }
     ]
 
     return (
         <div className="relative duration-100 animate-appearance-in">
             <div className="container mx-auto">
-                <h2 className="text-2xl font-bold mb-4 text-center">Is the area on a motorway or railway line?</h2>
+                <h2 className="text-2xl font-bold mb-4 text-center">Liegt die Fläche an einer Autobahn oder Bahnstrecke?</h2>
                 <p className="text-center mb-8">
-                    Please only select the option if your area is directly adjacent.
+                Bitte wählen Sie die Option nur, wenn Ihre Fläche direkt angrenzt.
                 </p>
                 <div className="flex justify-center">
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4 rounded-3xl ">

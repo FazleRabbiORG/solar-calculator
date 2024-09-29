@@ -11,14 +11,14 @@ export default function Home() {
   return (
     <div className='bg-bgTeal'>
       <Hero />
-      <div className='-mt-[200px] lg:p-20 p-5'>
+      <div className='-mt-[250px] lg:p-20 p-5'>
         <Calculator />
       </div>
       <Benefits />
       <HowItWorks />
       <CO2Info />
-      <FAQ />
-      <OpenScapceWorth />
+      {/* <FAQ /> */}
+      {/* <OpenScapceWorth /> */}
     </div>
   )
 }

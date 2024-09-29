@@ -19,17 +19,17 @@ export default function Remuneration({
     handleNextStep: () => void;
 }) {
     const landTypes: LandType[] = [
-        { name: 'Annual lease', icon: <FaHandHoldingUsd /> },
-        { name: 'One time payment', icon: <FaSackDollar /> },
-        { name: 'sell', icon: <MdSell /> },
+        { name: 'Jährliche Pacht', icon: <FaHandHoldingUsd /> },
+        { name: 'Einmalzahlung', icon: <FaSackDollar /> },
+        { name: 'Verkauf', icon: <MdSell /> },
     ]
 
     return (
         <div className="relative duration-100 animate-appearance-in">
             <div className="container mx-auto">
-                <h2 className="text-2xl font-bold mb-4 text-center">What remuneration do you want for the area?</h2>
+                <h2 className="text-2xl font-bold mb-4 text-center">Welche Vergütung wünschen Sie für die Fläche?</h2>
                 <p className="text-center mb-8">
-                    Please select an option.
+                Bitte wählen Sie eine Option aus.
                 </p>
                 <div className="flex justify-center">
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 -4 ">

@@ -25,15 +25,15 @@ function ParcelLocation({ parcelLocation, setParcelLocation }: ParcelLocationPro
 
     return (
         <div className="duration-100 animate-appearance-in">
-            <h2 className="text-2xl font-bold mb-4 text-center">Where is the parcel located?</h2>
+            <h2 className="text-2xl font-bold mb-4 text-center">Wo liegt das Flurstück?</h2>
             <p className="text-center mb-8">
-            If you have several parcels, please indicate the largest here.
+                Sollten Sie mehrere Flurstücke haben, geben Sie hier bitte das Größte an.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4">
-            <input
+                <input
                     type="text"
                     name="postcode"
-                    placeholder="Postcode"
+                    placeholder="Postleitzahl*"
                     value={parcelLocation.postcode}
                     onChange={handleChange}
                     className="border p-2 rounded-md mb-4"
@@ -41,7 +41,7 @@ function ParcelLocation({ parcelLocation, setParcelLocation }: ParcelLocationPro
                 <input
                     type="text"
                     name="hallway"
-                    placeholder="Hallway"
+                    placeholder="Flur"
                     value={parcelLocation.hallway}
                     onChange={handleChange}
                     className="border p-2 rounded-md mb-4"
@@ -49,7 +49,7 @@ function ParcelLocation({ parcelLocation, setParcelLocation }: ParcelLocationPro
                 <input
                     type="text"
                     name="district"
-                    placeholder="District or Community"
+                    placeholder="Gemarkung oder Gemeinde"
                     value={parcelLocation.district}
                     onChange={handleChange}
                     className="border p-2 rounded-md mb-4"
@@ -57,12 +57,12 @@ function ParcelLocation({ parcelLocation, setParcelLocation }: ParcelLocationPro
                 <input
                     type="text"
                     name="parcelNumber"
-                    placeholder="Parcel Number"
+                    placeholder="Flurstücksnummer"
                     value={parcelLocation.parcelNumber}
                     onChange={handleChange}
                     className="border p-2 rounded-md mb-4"
                 />
-                
+
             </div>
         </div>
     );

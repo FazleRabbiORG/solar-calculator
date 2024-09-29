@@ -12,13 +12,13 @@ const LandConnectivity = ({
     handleNextStep
 }: landConnectivityProps) => {
 
-    const options = ["Yes", "No"];
+    const options = ["Ja", "Nein"];
 
     return (
         <div className="container mx-auto duration-100 animate-appearance-in">
-            <h2 className="text-2xl font-bold mb-4 text-center">Is the area connected?</h2>
+            <h2 className="text-2xl font-bold mb-4 text-center">Ist die Fläche zusammenhängend?</h2>
             <p className="text-center mb-8">
-                Please select an option.
+            Bitte wählen Sie eine Option aus.
             </p>
             <div className="flex justify-center">
                 <div className="grid grid-cols-2 gap-4">

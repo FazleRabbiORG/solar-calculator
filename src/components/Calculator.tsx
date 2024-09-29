@@ -14,6 +14,7 @@ import ContactInfo from "./selectionComponents/ContactInfo";
 import OwnLand from "./selectionComponents/OwnLand";
 import Congratulations from "./selectionComponents/Congratulations";
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 
 enum Steps {
   LandType,
@@ -203,24 +204,25 @@ function Calculator() {
         })}
         {
           currentStep !== Steps.Congratulations && (
-            <div className="text-center mt-8">
+            <div className="text-center flex justify-center items-center mt-8">
               {
                 currentStep !== Steps.LandType && (
                   <button
                     // disabled={currentStep === Steps.LandType}
                     onClick={handlePreviousStep}
-                    className="bg-lightGray text-white px-6 py-2 rounded-full font-bold mr-4"
+                    className="bg-teal text-white px-6 py-2 rounded-full font-bold mr-4 flex justify-center items-center gap-4"
                   >
-                    Previous
+                    <FaCircleArrowLeft /> Zurück 
                   </button>
                 )
               }
               <button
                 disabled={buttonDisabled}
                 onClick={handleNextStep}
-                className={`${buttonDisabled ? "bg-lightGray" : "bg-teal"} text-white px-6 py-2 rounded-full font-bold`}
+                className={`${buttonDisabled ? "bg-lightGray" : "bg-teal"} text-white px-6 py-2 rounded-full font-bold flex justify-center items-center gap-4
+               `}
               >
-                Continue
+                Weiter <FaCircleArrowRight />
               </button>
 
             </div>

@@ -19,16 +19,16 @@ export default function Header() {
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className='bg-transparent'
+      className='bg-white py-2' 
     >
-      <NavbarContent className="sm:hidden" justify="start">
+      {/* <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
-      </NavbarContent>
+      </NavbarContent> */}
 
-      <NavbarContent className="sm:hidden pr-3" justify="center">
+      <NavbarContent className="sm:hidden " justify="center">
         <NavbarBrand>
           <Link href="/">
-            <Image src={'/logo.png'} alt="ePower" width={200} height={30} className='object-cover' />
+            <Image src='/logo.png' alt="ePower" width={250} height={50} className='object-cover' />
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -36,14 +36,14 @@ export default function Header() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
           <Link href="/">
-            <Image src={'/logo.png'} alt="ePower" width={200} height={30} className='object-cover' />
+            <Image src='/logo.png' alt="ePower" width={250} height={50} className='object-cover' />
           </Link>
         </NavbarBrand>
-        {menuItems.map((item, index) => (
+        {/* {menuItems.map((item, index) => (
           <NavbarItem key={index}>
             <Link href={item.href}>{item.name}</Link>
           </NavbarItem>
-        ))}
+        ))} */}
       </NavbarContent>
 
       {/* <NavbarContent justify="end">
@@ -57,7 +57,7 @@ export default function Header() {
         </NavbarItem>
       </NavbarContent> */}
 
-      <NavbarMenu 
+      {/* <NavbarMenu 
       >
         {menuItems.map((item, index) => (
           <NavbarMenuItem className='bg-transparent' key={index}>
@@ -70,7 +70,7 @@ export default function Header() {
             </Link>
           </NavbarMenuItem>
         ))}
-      </NavbarMenu>
+      </NavbarMenu> */}
     </Navbar>
   );
 }

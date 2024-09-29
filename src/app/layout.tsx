@@ -8,7 +8,7 @@ import { Providers } from './Provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'FlächenMakler - Online Pachtpreis-Rechner',
+  title: 'W Power – Online Pachtpreisrechner',
   description: 'Berechnen Sie Ihren Pachtpreis online mit FlächenMakler',
 }
 

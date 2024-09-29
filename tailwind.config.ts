@@ -47,9 +47,9 @@ const config: Config = {
         offWhite: 'var(--color-off-white)',
         white: 'var(--color-white)',
         lightTeal: 'var(--color-teal-light)',
-        lightestTeal: 'rgba(20, 156, 154, 0.5)',
-        lighterTeal : 'rgba(20, 156, 154, 0.4)',
-        bgTeal:'rgba(20, 156, 154, 0.1)',
+        lightestTeal: 'rgba(1, 81, 170, 0.5)',
+        lighterTeal : 'rgba(1, 81, 170, 0.4)',
+        bgTeal:'rgba(1, 81, 170, 0.1)',
       },
     },
   },
@@ -58,7 +58,7 @@ const config: Config = {
     themes: {
       light: {
        colors: {
-        primary: "#149C9A",
+        primary: "#0151AA",
         secondary: "#f9f9f9",
         background: "#f7f7f7",
         foreground: "#333",
@@ -66,7 +66,7 @@ const config: Config = {
       },
       dark: {
         colors:{
-        primary: "#149C9A",
+        primary: "#0151AA",
         secondary: "#f9f9f9",
         background: "#f7f7f7",
         foreground: "#333",

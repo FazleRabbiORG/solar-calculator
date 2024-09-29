@@ -12,13 +12,13 @@ function LandSize({
 }: LandSizeProps) {
     return (
         <div className="container mx-auto duration-100 animate-appearance-in">
-            <h2 className="text-2xl font-bold mb-4 text-center">How big is the area</h2>
+            <h2 className="text-2xl font-bold mb-4 text-center">Wie groß ist die Fläche?</h2>
             <p className="text-center mb-8">
-                Please use the slider to choose your area size. (10,000 m² = 1 hectare)
+            Bitte wählen Sie eine Option aus.
             </p>
             <div className='flex justify-between'>
-                <p>1 hectare</p>
-                <p>100 hectares</p>
+                <p>1 Hektar</p>
+                <p>100 Hektar</p>
             </div>
             <Slider
                 size='lg'

@@ -3,7 +3,6 @@
 import SendToAdmin from "@/lib/sendtoadmin";
 import SendToUser from "@/lib/sendtouser";
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
     try {
@@ -53,5 +52,4 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ message: "Error sending email", error }, { status: 500 });
     }
 }
-
 
