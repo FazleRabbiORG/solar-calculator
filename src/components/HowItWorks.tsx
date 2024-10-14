@@ -21,7 +21,7 @@ export default function HowItWorks() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className={` relative flex w-full flex-col items-center text-center md:mb-0 md:w-1/3 p-10 ${index === 0
+              className={` relative h-[250px] flex w-full flex-col items-center text-center md:mb-0 md:w-1/3 p-10 ${index === 0
                   ? "bg-lightestTeal"
                   : index === 1
                     ? "bg-lighterTeal"

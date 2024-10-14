@@ -39,7 +39,7 @@ export default function Remuneration({
                                     setRemuneration(type.name)
                                     handleNextStep()}}
                                 key={type.name}
-                                className={`flex flex-col items-center p-6 border  rounded-lg duration-500 ${type.name === remuneration ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal hover:text-white"}`}
+                                className={`flex flex-col items-center p-6  border  border-primary  rounded-lg duration-1000 ${type.name === remuneration ? "bg-teal text-white" : " hover:bg-teal   hover:text-white"}`}
                                     >
                                 <span className="text-5xl mb-2">{type.icon}</span>
                                 <span className="mt-4">{type.name}</span>

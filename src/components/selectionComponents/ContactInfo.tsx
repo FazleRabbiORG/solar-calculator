@@ -24,10 +24,10 @@ function ContactInfo({ contactInfo, setContactInfo }: ContactInfoProps) {
     };
     return (
         <div className="duration-100 animate-appearance-in">
-            <h2 className="text-2xl font-bold mb-4 text-center">Wer soll die kostenfreie Pachtberechnung per E-Mail erhalten?
+            <h2 className="text-2xl font-bold mb-4 text-center">An wen dürfen wir uns wenden?
             </h2>
             <p className="text-center mb-8">
-            Wir senden Ihnen direkt im Anschluss eine E-Mail mit der Pachtberechnung.
+            Sie erhalten eine ungefähre, unverbindliche Pachtschätzung per E-Mail, und ein Mitarbeiter <br /> wird sich innerhalb von 5 Tagen bei Ihnen melden. 
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 ">
                 <select  name="salutation" value={contactInfo.salutation} onChange={handleChange} className="border p-2 rounded-md mb-4 md:col-span-2">
@@ -67,7 +67,17 @@ function ContactInfo({ contactInfo, setContactInfo }: ContactInfoProps) {
                     onChange={handleChange}
                     className="border p-2 rounded-md mb-4"
                 />
-                
+            </div>
+            <div className="mb-4">
+                <label className="flex items-center">
+                    <input
+                        type="checkbox"
+                        // checked={isAgreed}
+                        // onChange={handleCheckboxChange}
+                        className="mr-2"
+                    />
+                    <span>Mit der Zustimmung zur Datenschutzerklärung willigen Sie ein, dass W Power Sie innerhalb von 5 Werktagen bezüglich Ihrer Anfrage kontaktiert.</span>
+                </label>
             </div>
         </div>
     );

@@ -30,7 +30,7 @@ const CurrentlyLeased = ({
                         }
                     } key={option} 
                     
-                    className={`flex flex-col hover:text-white items-center px-12 py-8 border  rounded-lg duration-500 ${option === currentlyLeased ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal hover:text-white"}`}> 
+                    className={`flex flex-col hover:text-white items-center px-12 py-8  border  border-primary  rounded-lg duration-1000 ${option === currentlyLeased ? "bg-teal text-white" : " hover:bg-teal   hover:text-white"}`}> 
                         <span className="text-5xl mb-2">{
                             option === "Yes" ? <FaRegCheckCircle /> : <FaRegTimesCircle />
                         } </span>

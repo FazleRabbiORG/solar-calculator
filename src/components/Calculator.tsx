@@ -13,19 +13,18 @@ import Remuneration from "./selectionComponents/Remuneration";
 import ContactInfo from "./selectionComponents/ContactInfo";
 import OwnLand from "./selectionComponents/OwnLand";
 import Congratulations from "./selectionComponents/Congratulations";
-import { motion, AnimatePresence } from 'framer-motion';
 import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 
 enum Steps {
   LandType,
+  MotorOrRail,
+  IsGridEntryPoint,
+  ParcelLocation,
   OwnsLand,
   LandSize,
   LandConnectivity,
   CurrentlyLeased,
   InterestedToLease,
-  MotorOrRail,
-  IsGridEntryPoint,
-  ParcelLocation,
   Remuneration,
   ContactInfo,
   Congratulations
@@ -222,7 +221,9 @@ function Calculator() {
                 className={`${buttonDisabled ? "bg-lightGray" : "bg-teal"} text-white px-6 py-2 rounded-full font-bold flex justify-center items-center gap-4
                `}
               >
-                Weiter <FaCircleArrowRight />
+                {
+                  currentStep === Steps.ContactInfo ? "Absenden" : "Weiter" 
+                }  <FaCircleArrowRight />
               </button>
 
             </div>

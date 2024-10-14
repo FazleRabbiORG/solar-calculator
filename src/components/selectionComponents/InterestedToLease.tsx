@@ -1,7 +1,7 @@
 // File: components/LandTypeSelector.tsx
 'use client'
 
-import { FaRegTimesCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 import { GiSolarPower } from "react-icons/gi";
 import { MdBatteryChargingFull, MdOutlineWindPower } from "react-icons/md";
 
@@ -21,9 +21,9 @@ export default function InterestedToLease({
 }) {
     const landTypes: LandType[] = [
         { name: 'Solar', icon: <GiSolarPower /> },
-        { name: 'Windkraft', icon: <MdOutlineWindPower /> },
+        // { name: 'Windkraft', icon: <MdOutlineWindPower /> },
         { name: 'Batteriespeicher', icon: <MdBatteryChargingFull /> },
-        { name: 'Nein', icon: <FaRegTimesCircle /> }
+        { name: 'Beide', icon: <FaCheckCircle /> }
     ]
 
     return (
@@ -34,7 +34,7 @@ export default function InterestedToLease({
                 Bitte wählen Sie eine Option aus.
                 </p>
                 <div className="flex justify-center">
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center ">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center items-center ">
                         {landTypes.map((type) => (
                             <button onClick={
                                 () => {
@@ -43,7 +43,7 @@ export default function InterestedToLease({
                                 }
                             } key={type.name}
 
-                                className={`flex flex-col  hover:text-white  items-center px-12 py-8 border  rounded-lg duration-500 ${type.name === interestedToLease ? "bg-teal text-white" : " hover:bg-teal bg-lightTeal"}`}>
+                                className={`flex flex-col  hover:text-white  items-center px-12 py-8  border  border-primary  rounded-lg duration-1000 ${type.name === interestedToLease ? "bg-teal text-white" : " hover:bg-teal  "}`}>
 
                                 <span className="text-5xl mb-2">{type.icon}</span>
                                 <span className="mt-4">{type.name}</span>

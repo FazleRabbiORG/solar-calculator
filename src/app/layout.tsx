@@ -1,11 +1,14 @@
-import { Inter } from 'next/font/google'
+import { Titillium_Web } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Providers } from './Provider'
 
-const inter = Inter({ subsets: ['latin'] })
+const titilliumWeb = Titillium_Web({
+  weight: ['200', '300', '400', '600', '700', '900'],
+  subsets: ['latin', 'latin-ext'],
+});
 
 export const metadata = {
   title: 'W Power – Online Pachtpreisrechner',
@@ -19,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={titilliumWeb.className}>
         <Providers >
           <div className="flex flex-col min-h-screen">
             {/* <Header /> */}

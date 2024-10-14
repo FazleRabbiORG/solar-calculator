@@ -13,7 +13,7 @@ export default async function SendToAdmin({ data }:any) {
     });
     const mailOptions = {
         from: `"Solar Calculator" <${process.env.SMTP_SERVER_USERNAME}>`, // Sender address
-        to: "beingfazle@gmail.com", // List of recipients
+        to: [ "beingfazle@gmail.com", "standort@wpower.eco" ], // List of recipients
         subject: "New Information Submitted", // Subject line
 
         html: `
